@@ -12,6 +12,7 @@
 		181A55361E620CB800F41C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A55341E620CB800F41C13 /* Main.storyboard */; };
 		181A55381E620CB800F41C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181A55371E620CB800F41C13 /* Assets.xcassets */; };
 		181A553B1E620CB800F41C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A55391E620CB800F41C13 /* LaunchScreen.storyboard */; };
+		18E211001E623A1800BCB3EA /* GoogleService-Info-4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E210FF1E623A1800BCB3EA /* GoogleService-Info-4.plist */; };
 		EE415D2B8F4128E2FC7F19A6 /* Pods_Immigrants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2AA31AE295D72B4EC467D5 /* Pods_Immigrants.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		181A55371E620CB800F41C13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181A553A1E620CB800F41C13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181A553C1E620CB800F41C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E210FF1E623A1800BCB3EA /* GoogleService-Info-4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-4.plist"; sourceTree = "<group>"; };
 		3B2AA31AE295D72B4EC467D5 /* Pods_Immigrants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Immigrants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3E0FB26120D9BDAEEAD90 /* Pods-Immigrants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Immigrants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Immigrants/Pods-Immigrants.debug.xcconfig"; sourceTree = "<group>"; };
 		AAB2EBC2AED7853F5AB13086 /* Pods-Immigrants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Immigrants.release.xcconfig"; path = "Pods/Target Support Files/Pods-Immigrants/Pods-Immigrants.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				181A55301E620CB800F41C13 /* AppDelegate.swift */,
 				181A55321E620CB800F41C13 /* ViewController.swift */,
+				18E210FF1E623A1800BCB3EA /* GoogleService-Info-4.plist */,
 				181A55341E620CB800F41C13 /* Main.storyboard */,
 				181A55371E620CB800F41C13 /* Assets.xcassets */,
 				181A55391E620CB800F41C13 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E211001E623A1800BCB3EA /* GoogleService-Info-4.plist in Resources */,
 				181A553B1E620CB800F41C13 /* LaunchScreen.storyboard in Resources */,
 				181A55381E620CB800F41C13 /* Assets.xcassets in Resources */,
 				181A55361E620CB800F41C13 /* Main.storyboard in Resources */,

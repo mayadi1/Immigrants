@@ -9,11 +9,12 @@
 import UIKit
 import MapKit
 import PubNub
+import Firebase
 
 class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     var locationManager = CLLocationManager()
     var client: PubNub!
-
+    let ref = FIRDatabase.database().reference()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
@@ -36,15 +37,11 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     @IBAction func alertButtonPressed(_ sender: Any) {
 
         let message = [
-            "body": "Hi How are ydededecou todayfdsfd66",
+            "body": "Hi How are ydededecou todakkyfdsfd66",
             "to": "8052152331"
         ]
         client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
-            if (PNPublishStatus.errorData == nil){
-                print(PNPublishStatus.errorData)
-            }else{
-                print("sent")
-            }
+            
         }
     }
 
@@ -141,8 +138,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     
     func pubNubIsReady(){
         //enable UI
-        print(" iam here"
-        )
+        
     }
 }
 
