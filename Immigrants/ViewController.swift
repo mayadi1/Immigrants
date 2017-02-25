@@ -12,9 +12,14 @@ import PubNub
 import Firebase
 
 class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
+    var numbers = [String]()
     var locationManager = CLLocationManager()
     var client: PubNub!
     let ref = FIRDatabase.database().reference()
+    override func viewWillAppear(_ animated: Bool) {
+        self.getInfoFromFirebase()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
@@ -29,6 +34,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,8 +43,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     @IBAction func alertButtonPressed(_ sender: Any) {
 
         let message = [
-            "body": "Hi How are ydededecou todakkyfdsfd66",
-            "to": "8052152331"
+            "body": "ICE on level 4 in the business section legal help needed."
         ]
         client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
             
@@ -139,6 +144,13 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     func pubNubIsReady(){
         //enable UI
         
+   }
+    
+    func getInfoFromFirebase(){
+        let condition = ref.child("phoneNumbers")
+        condition.observe(.childAdded, with: { (snapshot) in
+            self.numbers.append((snapshot.value as? String)!)
+        })
     }
 }
 
