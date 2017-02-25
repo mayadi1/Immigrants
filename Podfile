@@ -19,5 +19,6 @@ pod 'Firebase/Storage’
 pod 'Firebase/Messaging'
 pod 'Firebase/Analytics'
 pod ‘PubNub’
+pod 'SVProgressHUD', '1.1.3'  
 
 end

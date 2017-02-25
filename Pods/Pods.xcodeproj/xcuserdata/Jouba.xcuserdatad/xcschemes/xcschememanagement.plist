@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SlackTextViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C4315222349DB1B2161E4F202CD7BE1</key>
+		<key>1C70033D8DF0FDE4004E92D15CAF4855</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BEBF376DE0A0EFD460FBDD7FBCFB423</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EDF4E1846BF2B37BE0D6DC4A1398A42</key>
+		<key>945F84DA109A63506261A17EA484E760</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8650F73EBABE339AD8E5E28679DEB770</key>
+		<key>B4BED9D4B182AA1C6DD211F6FE4AB6A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEBC747752CECDC6B2C3B6D2B738E9C3</key>
+		<key>D7CE1FD9C0FA88BA74FBCD778DB31A82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

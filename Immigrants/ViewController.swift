@@ -12,17 +12,16 @@ import PubNub
 import Firebase
 
 class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
-    var numbers = [String]()
     var locationManager = CLLocationManager()
     var client: PubNub!
     let ref = FIRDatabase.database().reference()
-    
+    var numbers = [String]()
     override func viewWillAppear(_ animated: Bool) {
-        self.getInfoFromFirebase()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getInfoFromFirebase()
         locationManager.requestWhenInUseAuthorization()
         locationManager.stopUpdatingLocation()
         // Initialize and configure PubNub client instance
@@ -42,9 +41,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     }
 
     @IBAction func alertButtonPressed(_ sender: Any) {
-        for number in self.numbers{
-            sendAlertTo(number: number)
-        }
+        self.sendAlertTo()
     }
 
     // Handle new message from one of channels on which client has been subscribed.
@@ -149,14 +146,20 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
         })
     }
     
-    func sendAlertTo(number: String){
-        let message = [
-            "body": "ICE on level 4 in the business section legal help needed.",
-            "to" : "\(numbers)"
-        ]
-        client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
-            
+    func sendAlertTo(){
+        let thisAddress = "301 Howard St, San Francisco, CA 94105"
+        
+        for number in self.numbers{
+            let body = "ICE on level 4 in the business section legal help needed." + thisAddress
+            print(number)
+            let message = [
+                "body": "\(body)",
+                "to" : "\(number)"
+            ]
+            client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
+            }
         }
+       
     }
 }
 

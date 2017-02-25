@@ -57,6 +57,7 @@ PODS:
     - PubNub/Core (= 4.5.13)
   - PubNub/Core (4.5.13)
   - SlackTextViewController (1.9.5)
+  - SVProgressHUD (1.1.3)
   - TwilioAccessManager (0.1.3)
   - TwilioChatClient (0.16.1)
 
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - PubNub
   - SlackTextViewController (~> 1.7)
+  - SVProgressHUD (= 1.1.3)
   - TwilioAccessManager (~> 0.1.1)
   - TwilioChatClient (~> 0.16.0)
 
@@ -86,9 +88,10 @@ SPEC CHECKSUMS:
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
   PubNub: 53711c37f9bcd8f927f154ca91774910a6b552ed
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TwilioAccessManager: 30ce2f7cf78ef5dd4cf19562fc204313bac625f6
   TwilioChatClient: d80c1df84943a47ea01c02a51f4adba9f9b7ed5b
 
-PODFILE CHECKSUM: fc2f7a1c4ce6832e843c0e954714f650d8e32151
+PODFILE CHECKSUM: 654af7a1b9849e3f5f8b44a51b5d95eb6eacd63c
 
 COCOAPODS: 1.2.0
