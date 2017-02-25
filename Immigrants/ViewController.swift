@@ -16,6 +16,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     var locationManager = CLLocationManager()
     var client: PubNub!
     let ref = FIRDatabase.database().reference()
+    
     override func viewWillAppear(_ animated: Bool) {
         self.getInfoFromFirebase()
     }
@@ -41,12 +42,8 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     }
 
     @IBAction func alertButtonPressed(_ sender: Any) {
-
-        let message = [
-            "body": "ICE on level 4 in the business section legal help needed."
-        ]
-        client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
-            
+        for number in self.numbers{
+            sendAlertTo(number: number)
         }
     }
 
@@ -62,7 +59,6 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
             
             // Message has been received on channel stored in message.data.channel.
         }
-        
         print("Received message: \(message.data.message) on channel \(message.data.channel) " +
             "at \(message.data.timetoken)")
     }
@@ -143,14 +139,24 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     
     func pubNubIsReady(){
         //enable UI
-        
    }
     
     func getInfoFromFirebase(){
         let condition = ref.child("phoneNumbers")
         condition.observe(.childAdded, with: { (snapshot) in
             self.numbers.append((snapshot.value as? String)!)
+            print("new number added")
         })
+    }
+    
+    func sendAlertTo(number: String){
+        let message = [
+            "body": "ICE on level 4 in the business section legal help needed.",
+            "to" : "\(numbers)"
+        ]
+        client.publish(message, toChannel: "clicksend-text") { (PNPublishStatus) in
+            
+        }
     }
 }
 
