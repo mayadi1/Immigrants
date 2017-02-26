@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class SMSViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -29,6 +30,7 @@ class SMSViewController: UIViewController {
     }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
+        SVProgressHUD.showSuccess(withStatus: "Got it!")
         ref.child("phoneNumbers").childByAutoId().setValue(self.phoneNumberTextField.text)
         self.dismiss(animated: false) {
         }

@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import PubNub
 import Firebase
+import SVProgressHUD
 
 class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     var locationManager = CLLocationManager()
@@ -147,6 +148,7 @@ class ViewController: UIViewController,MKMapViewDelegate,PNObjectEventListener {
     }
     
     func sendAlertTo(){
+        SVProgressHUD.showSuccess(withStatus: "Alert sent to \(self.numbers.count) people.")
         let thisAddress = "301 Howard St, San Francisco, CA 94105"
         
         for number in self.numbers{

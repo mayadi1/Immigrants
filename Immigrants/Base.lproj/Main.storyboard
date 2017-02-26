@@ -28,7 +28,7 @@
                                 <rect key="frame" x="80" y="196" width="225" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Send Alet">
+                                <state key="normal" title="Send Alert">
                                     <color key="titleColor" red="1" green="0.049691020333036517" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
